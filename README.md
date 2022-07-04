@@ -34,3 +34,36 @@ Download required models:
   * [Pretrained network](https://drive.google.com/file/d/1gsJuFf2b927AqVp3BrlZkHv8wrk9gBbF/view?usp=sharing)
   * [Shape predictor](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
   * [Hairstyle latent space directions for manipulation](https://drive.google.com/file/d/12RXDNfvqIQxARD_zl-MQLlT6lUkgnzYH/view?usp=sharing)
+
+
+## Inference
+
+### Hairstyle Transfer
+```
+python inference.py --output_path /path/to/save/the/results/ \
+--mode transfer \
+--source /path/to/img1.jpg \
+--target /path/to/img2.png \
+[--alpha_blend]
+```
+
+### Interpolation
+```
+python inference.py --output_path /path/to/save/the/results/ \
+--mode interp \
+--source /path/to/img1.jpg \
+--target /path/to/img2.png  \
+--nsteps 10 \
+[--interpolate_face] \
+[--alpha_blend]
+```
+
+### Manipulation
+```
+python inference.py --output_path /path/to/save/the/results/ \
+--mode manip \
+--source /path/to/img1.jpg  \
+--attribute color/structure \
+--strength 10,10.5,11. \
+[--alpha_blend]
+```
