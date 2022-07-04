@@ -8,7 +8,6 @@ import cv2
 import imageio
 import numpy as np
 from face_alignment import FaceAlignment, LandmarksType
-import fnmatch
 
 
 fa = FaceAlignment(LandmarksType._2D, device='cuda:0')
