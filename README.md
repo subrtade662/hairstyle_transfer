@@ -67,3 +67,24 @@ python inference.py --output_path /path/to/save/the/results/ \
 --strength 10,10.5,11. \
 [--alpha_blend]
 ```
+
+## Acknowledgements
+
+Source code builds upon the work of Richardson et al. [pixel2style2pixel](https://github.com/eladrich/pixel2style2pixel).
+
+## Citation
+If you find this useful, please, cite our paper.
+
+```
+@INPROCEEDINGS{9667038,
+  author={Šubrtová, Adéla and Čech, Jan and Franc, Vojtěch},
+  booktitle={2021 16th IEEE International Conference on Automatic Face and Gesture Recognition (FG 2021)}, 
+  title={Hairstyle Transfer between Face Images}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-8},
+  doi={10.1109/FG52635.2021.9667038}}
+
+``` 
+
