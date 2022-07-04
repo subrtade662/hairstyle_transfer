@@ -17,10 +17,20 @@ Adéla Šubrtová, Jan Čech, Vojtěch Franc
 
 
 
-##Installation
+## Installation
 
 Clone this repository.
 ```
 git clone https://github.com/subrtade662/hairstyle_transfer.git
 cd hairstyle_transfer
 ```
+
+Install dependencies
+```
+pip install -r requirements.txt
+```
+
+Download required models:
+  * [Pretrained network](https://drive.google.com/file/d/1gsJuFf2b927AqVp3BrlZkHv8wrk9gBbF/view?usp=sharing)
+  * [Shape predictor](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
+  * [Hairstyle latent space directions for manipulation](https://drive.google.com/file/d/12RXDNfvqIQxARD_zl-MQLlT6lUkgnzYH/view?usp=sharing)
