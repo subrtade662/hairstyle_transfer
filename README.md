@@ -17,10 +17,74 @@ Adéla Šubrtová, Jan Čech, Vojtěch Franc
 
 
 
-##Installation
+## Installation
 
 Clone this repository.
 ```
 git clone https://github.com/subrtade662/hairstyle_transfer.git
 cd hairstyle_transfer
 ```
+
+Install dependencies
+```
+pip install -r requirements.txt
+```
+
+Download required models:
+  * [Pretrained network](https://drive.google.com/file/d/1gsJuFf2b927AqVp3BrlZkHv8wrk9gBbF/view?usp=sharing)
+  * [Shape predictor](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
+  * [Hairstyle latent space directions for manipulation](https://drive.google.com/file/d/12RXDNfvqIQxARD_zl-MQLlT6lUkgnzYH/view?usp=sharing)
+
+
+## Inference
+
+### Hairstyle Transfer
+```
+python inference.py --output_path /path/to/save/the/results/ \
+--mode transfer \
+--source /path/to/img1.jpg \
+--target /path/to/img2.png \
+[--alpha_blend]
+```
+
+### Interpolation
+```
+python inference.py --output_path /path/to/save/the/results/ \
+--mode interp \
+--source /path/to/img1.jpg \
+--target /path/to/img2.png  \
+--nsteps 10 \
+[--interpolate_face] \
+[--alpha_blend]
+```
+
+### Manipulation
+```
+python inference.py --output_path /path/to/save/the/results/ \
+--mode manip \
+--source /path/to/img1.jpg  \
+--attribute color/structure \
+--strength 10,10.5,11. \
+[--alpha_blend]
+```
+
+## Acknowledgements
+
+Source code builds upon the work of Richardson et al. [pixel2style2pixel](https://github.com/eladrich/pixel2style2pixel).
+
+## Citation
+If you find this useful, please, cite our paper.
+
+```
+@INPROCEEDINGS{9667038,
+  author={Šubrtová, Adéla and Čech, Jan and Franc, Vojtěch},
+  booktitle={2021 16th IEEE International Conference on Automatic Face and Gesture Recognition (FG 2021)}, 
+  title={Hairstyle Transfer between Face Images}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-8},
+  doi={10.1109/FG52635.2021.9667038}}
+
+``` 
+
