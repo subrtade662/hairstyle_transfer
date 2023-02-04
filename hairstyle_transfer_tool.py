@@ -23,6 +23,7 @@ class Tool:
         self.uploaded_images_path = './data/uploaded_images/'
         self.predefined_images_path = './data/'
         os.makedirs((self.uploaded_images_path), exist_ok=True)
+        os.makedirs((result_path), exist_ok=True)
         self.chars = np.array((list(string.ascii_letters + string.digits + '_')), dtype=str)
         self.char_inds = np.arange(len(self.chars))
         self.alpha_blend_sigma = 5.0
