@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ```
 
 Download required models:
-  * [Pretrained network](https://drive.google.com/file/d/1gsJuFf2b927AqVp3BrlZkHv8wrk9gBbF/view?usp=sharing)
+  * ✳️UPDATED✳️ [Pretrained network](https://drive.google.com/file/d/1gsJuFf2b927AqVp3BrlZkHv8wrk9gBbF/view?usp=sharing)
   * [Shape predictor](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
   * [Hairstyle latent space directions for manipulation](https://drive.google.com/file/d/12RXDNfvqIQxARD_zl-MQLlT6lUkgnzYH/view?usp=sharing)
 
